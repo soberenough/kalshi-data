@@ -46,10 +46,10 @@ jobs:
               git add -A
               if ! git diff --cached --quiet; then
                 git commit -q -m "Snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
-                for i in 1 2 3; do git pull -q --rebase origin data 2>/dev/null; git push -q origin data && break; sleep 3; done
+                for i in 1 2 3; do git pull -q --rebase origin data 2>/dev/null || true; if git push -q origin data; then break; fi; sleep 3; done
               fi )
             if [ $k -lt 6 ]; then
               left=$(( 600 - ($(date +%s) - start) ))
-              [ $left -gt 0 ] && sleep $left
+              if [ $left -gt 0 ]; then sleep $left; fi
             fi
           done
