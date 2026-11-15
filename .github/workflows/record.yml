@@ -1,0 +1,55 @@
+# Public Kalshi data recorder. PUBLIC DATA ONLY: no account, no keys, no orders.
+name: Record Kalshi data
+
+on:
+  schedule:
+    - cron: "7 * * * *"    # hourly; each run records six snapshots ~10 minutes apart
+    - cron: "37 * * * *"   # backup start if the first is skipped
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: record
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 62
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Open the data branch
+        run: |
+          git config --global user.name "kalshi-data-bot"
+          git config --global user.email "kalshi-data-bot@users.noreply.github.com"
+          url="https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          if git ls-remote --exit-code --heads "$url" data >/dev/null; then
+            git clone -q --depth 1 --branch data "$url" databranch
+          else
+            mkdir databranch && cd databranch && git init -q -b data && git remote add origin "$url"
+            printf "# Data branch\n\nWritten by .github/workflows/record.yml on main.\n" > README.md
+            git add README.md && git commit -q -m "Start data branch"
+          fi
+      - name: Record six snapshots, ~10 minutes apart
+        run: |
+          for k in 1 2 3 4 5 6; do
+            start=$(date +%s)
+            python recorder/ob_recorder.py --out databranch || true
+            python recorder/reward_tracker.py --out databranch || true
+            ( cd databranch
+              git add -A
+              if ! git diff --cached --quiet; then
+                git commit -q -m "Snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+                for i in 1 2 3; do git pull -q --rebase origin data 2>/dev/null; git push -q origin data && break; sleep 3; done
+              fi )
+            if [ $k -lt 6 ]; then
+              left=$(( 600 - ($(date +%s) - start) ))
+              [ $left -gt 0 ] && sleep $left
+            fi
+          done
