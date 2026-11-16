@@ -8,10 +8,11 @@ Trade rule: take the market (taker fee, quadratic) when model edge > fee + 2 cen
 Reports Brier (model vs market mid) and P&L per contract in two halves (both must be positive to count).
 Also tries Yahoo for RBOB futures (RB=F) to see if a wholesale signal is reachable.
 """
-import json, math, statistics, time, datetime as dt, requests
+import json, math, os, statistics, time, datetime as dt, requests
+HOUR = int(os.environ.get("DEC_HOUR", "21"))
 B = "https://api.elections.kalshi.com/trade-api/v2"
 S = "KXAAAGASD"
-OUT = "research/gas_test_results.md"
+OUT = f"research/gas_test_results_{os.environ.get('DEC_HOUR','21')}h.md"
 
 
 def get(url, **p):
@@ -84,7 +85,7 @@ for m in mk:
     strike = m.get("floor_strike")
     if strike is None: continue
     p_yes = 1 - ncdf((float(strike) - mu) / sig)
-    t_dec = int(dt.datetime.combine(D - dt.timedelta(days=1), dt.time(21, 0)).replace(tzinfo=dt.timezone(dt.timedelta(hours=-5))).timestamp())
+    t_dec = int(dt.datetime.combine(D - dt.timedelta(days=1), dt.time(HOUR, 0)).replace(tzinfo=dt.timezone(dt.timedelta(hours=-5))).timestamp())
     c = get(f"{B}/series/{S}/markets/{m['ticker']}/candlesticks", start_ts=t_dec - 6 * 3600, end_ts=t_dec, period_interval=60)
     cs = [x for x in c.get("candlesticks", []) if x.get("end_period_ts", 0) <= t_dec]
     if not cs: continue
@@ -123,7 +124,7 @@ except Exception as e:
     rbob = f"not reachable ({type(e).__name__})"
 
 with open(OUT, "w") as f:
-    f.write(f"# Kalshi daily gas (KXAAAGASD) momentum test, run {dt.datetime.utcnow():%Y-%m-%d %H:%MZ}\n\n")
+    f.write(f"# Kalshi daily gas (KXAAAGASD) momentum test, decision {HOUR}:00 ET D-1, run {dt.datetime.utcnow():%Y-%m-%d %H:%MZ}\n\n")
     f.write(f"Settled markets: {len(mk)}; AAA days: {len(days)} ({days[0] if days else ''} to {days[-1] if days else ''}); priced rows: {len(rows)}\n\n")
     for k_, v in res.items(): f.write(f"- **{k_}**: {json.dumps(v)}\n")
     f.write(f"\nRBOB (Yahoo RB=F): {rbob}\n\nPass bar: model Brier below market in both halves AND positive P&L per contract in both halves with t > 2.\n")
