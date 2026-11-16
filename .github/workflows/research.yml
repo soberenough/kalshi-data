@@ -1,0 +1,20 @@
+name: research
+on:
+  workflow_dispatch:
+    inputs:
+      script: { description: "research/<script>.py", required: true }
+permissions: { contents: write }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests==2.32.3
+      - run: python research/${{ github.event.inputs.script }}.py
+      - run: |
+          git config user.name "kalshi-data-bot"; git config user.email "kalshi-data-bot@users.noreply.github.com"
+          git add research; git diff --cached --quiet || git commit -q -m "research: ${{ github.event.inputs.script }}"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 3; done
