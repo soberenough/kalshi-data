@@ -1,0 +1,270 @@
+{
+ "KXAAAGASD_series": {
+  "series": {
+   "additional_prohibitions": [
+    "Persons who are employed by any of the Source Agencies are not permitted to trade on the Contract.",
+    "Persons who hold any material, non-public information on the Underlying are not permitted to trade on the Contract."
+   ],
+   "categories": [
+    "Economics"
+   ],
+   "category": "Economics",
+   "contract_terms_url": "https://assets.kalshi.com/contract_terms/AAAGAS.pdf",
+   "contract_url": "https://assets.kalshi.com/regulatory/product-certifications/AAAGAS.pdf",
+   "exchange_index": 0,
+   "fee_multiplier": 1,
+   "fee_type": "quadratic",
+   "frequency": "daily",
+   "last_updated_ts": "2026-11-13T01:30:31.598712Z",
+   "product_metadata": {
+    "scope": "Gasoline"
+   },
+   "settlement_sources": [
+    {
+     "name": "AAA",
+     "url": "https://gasprices.aaa.com/"
+    }
+   ],
+   "tags": [
+    "Oil & Gas",
+    "Oil and energy",
+    "Econ Daily"
+   ],
+   "ticker": "KXAAAGASD",
+   "title": "US gas price up"
+  }
+ },
+ "KXAAAGASD_settled": [
+  {
+   "ticker": "KXAAAGASD-26NOV16-3.8650",
+   "event_ticker": "KXAAAGASD-26NOV16",
+   "title": "Will average **gas prices** be above $3.8650?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.8650",
+   "strike_type": "greater",
+   "floor_strike": 3.865,
+   "cap_strike": null,
+   "open_time": "2026-11-15T13:00:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "no",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.8650 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASD-26NOV16-3.8600",
+   "event_ticker": "KXAAAGASD-26NOV16",
+   "title": "Will average **gas prices** be above $3.8600?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.8600",
+   "strike_type": "greater",
+   "floor_strike": 3.86,
+   "cap_strike": null,
+   "open_time": "2026-11-15T13:00:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "no",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.8600 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASD-26NOV16-3.8550",
+   "event_ticker": "KXAAAGASD-26NOV16",
+   "title": "Will average **gas prices** be above $3.8550?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.8550",
+   "strike_type": "greater",
+   "floor_strike": 3.855,
+   "cap_strike": null,
+   "open_time": "2026-11-15T13:00:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "no",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.8550 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASD-26NOV16-3.8500",
+   "event_ticker": "KXAAAGASD-26NOV16",
+   "title": "Will average **gas prices** be above $3.8500?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.8500",
+   "strike_type": "greater",
+   "floor_strike": 3.85,
+   "cap_strike": null,
+   "open_time": "2026-11-15T13:00:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "no",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.8500 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASD-26NOV16-3.8450",
+   "event_ticker": "KXAAAGASD-26NOV16",
+   "title": "Will average **gas prices** be above $3.8450?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.8450",
+   "strike_type": "greater",
+   "floor_strike": 3.845,
+   "cap_strike": null,
+   "open_time": "2026-11-15T13:00:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "no",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.8450 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASD-26NOV16-3.8400",
+   "event_ticker": "KXAAAGASD-26NOV16",
+   "title": "Will average **gas prices** be above $3.8400?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.8400",
+   "strike_type": "greater",
+   "floor_strike": 3.84,
+   "cap_strike": null,
+   "open_time": "2026-11-15T13:00:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "no",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.8400 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  }
+ ],
+ "KXAAAGASD_settled_count": 1242,
+ "KXAAAGASW_series": {
+  "series": {
+   "additional_prohibitions": [
+    "Persons who are employed by any of the Source Agencies are not permitted to trade on the Contract.",
+    "Persons who hold any material, non-public information on the Underlying are not permitted to trade on the Contract."
+   ],
+   "categories": [
+    "Economics"
+   ],
+   "category": "Economics",
+   "contract_terms_url": "https://assets.kalshi.com/contract_terms/AAAGAS.pdf",
+   "contract_url": "https://assets.kalshi.com/regulatory/product-certifications/AAAGAS.pdf",
+   "exchange_index": 0,
+   "fee_multiplier": 1,
+   "fee_type": "quadratic",
+   "frequency": "weekly",
+   "last_updated_ts": "2026-11-13T01:35:51.376806Z",
+   "product_metadata": {
+    "scope": "Gasoline"
+   },
+   "settlement_sources": [
+    {
+     "name": "AAA",
+     "url": "https://gasprices.aaa.com/"
+    }
+   ],
+   "tags": [
+    "Econ Weekly",
+    "Oil and energy"
+   ],
+   "ticker": "KXAAAGASW",
+   "title": "US gas price up"
+  }
+ },
+ "KXAAAGASW_settled": [
+  {
+   "ticker": "KXAAAGASW-26NOV16-3.8100",
+   "event_ticker": "KXAAAGASW-26NOV16",
+   "title": "Will average **gas prices** be above $3.8100?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.8100",
+   "strike_type": "greater",
+   "floor_strike": 3.81,
+   "cap_strike": null,
+   "open_time": "2026-11-12T22:15:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "yes",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.8100 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASW-26NOV16-3.7900",
+   "event_ticker": "KXAAAGASW-26NOV16",
+   "title": "Will average **gas prices** be above $3.7900?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.7900",
+   "strike_type": "greater",
+   "floor_strike": 3.79,
+   "cap_strike": null,
+   "open_time": "2026-11-12T22:15:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "yes",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.7900 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASW-26NOV16-3.7700",
+   "event_ticker": "KXAAAGASW-26NOV16",
+   "title": "Will average **gas prices** be above $3.7700?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.7700",
+   "strike_type": "greater",
+   "floor_strike": 3.77,
+   "cap_strike": null,
+   "open_time": "2026-11-12T22:15:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "yes",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.7700 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASW-26NOV16-3.7000",
+   "event_ticker": "KXAAAGASW-26NOV16",
+   "title": "Will average **gas prices** be above $3.7000?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.7000",
+   "strike_type": "greater",
+   "floor_strike": 3.7,
+   "cap_strike": null,
+   "open_time": "2026-11-10T23:00:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "yes",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.7000 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASW-26NOV16-3.7200",
+   "event_ticker": "KXAAAGASW-26NOV16",
+   "title": "Will average **gas prices** be above $3.7200?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.7200",
+   "strike_type": "greater",
+   "floor_strike": 3.72,
+   "cap_strike": null,
+   "open_time": "2026-11-10T23:00:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "yes",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.7200 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  },
+  {
+   "ticker": "KXAAAGASW-26NOV16-3.7400",
+   "event_ticker": "KXAAAGASW-26NOV16",
+   "title": "Will average **gas prices** be above $3.7400?",
+   "subtitle": null,
+   "yes_sub_title": "Above 3.7400",
+   "strike_type": "greater",
+   "floor_strike": 3.74,
+   "cap_strike": null,
+   "open_time": "2026-11-10T23:00:00Z",
+   "close_time": "2026-11-16T04:59:00Z",
+   "expiration_value": "3.8118",
+   "result": "yes",
+   "volume": null,
+   "rules_primary": "If average regular gas prices for United States are strictly greater than $3.7400 on Nov 16, 2026 according to AAA, then the market resolves to Yes."
+  }
+ ],
+ "KXAAAGASW_settled_count": 271,
+ "stooq_err": "HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=rb.f&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443) at 0x7f4d53757ec0>, 'Connection to stooq.com timed out. (connect timeout=30)'))"
+}
