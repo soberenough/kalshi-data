@@ -1,0 +1,73 @@
+{
+ "week": "2026-11-09..2026-11-15",
+ "all_permits": 184,
+ "by_category": [
+  [
+   "Pool (new)",
+   33
+  ],
+  [
+   "Addition/remodel",
+   32
+  ],
+  [
+   "New home",
+   26
+  ],
+  [
+   "Windows/doors",
+   6
+  ],
+  [
+   "HVAC change-out",
+   3
+  ],
+  [
+   "Generator",
+   2
+  ],
+  [
+   "Roof replacement",
+   2
+  ]
+ ],
+ "median_value": {
+  "Addition/remodel": 196619,
+  "Windows/doors": 10000,
+  "New home": 319000,
+  "Generator": 210000,
+  "Pool (new)": 54000,
+  "HVAC change-out": 146618,
+  "Roof replacement": 469564
+ },
+ "by_county_type": [
+  [
+   "Residential New Construction",
+   58
+  ],
+  [
+   "Residential Miscellaneous",
+   54
+  ],
+  [
+   "Residential Building Alterations (Renovations)",
+   24
+  ],
+  [
+   "Commercial Building Alterations (Renovations)",
+   23
+  ],
+  [
+   "Commercial Miscellaneous",
+   19
+  ],
+  [
+   "Residential Addition",
+   5
+  ],
+  [
+   "Commercial New Construction",
+   1
+  ]
+ ]
+}
