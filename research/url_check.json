@@ -1,0 +1,75 @@
+{
+ "https://www.waveapps.com/invoicing": {
+  "status": 200,
+  "final": "https://www.waveapps.com/invoicing",
+  "title": "Best Invoice Software for Small Businesses - Wave Financial"
+ },
+ "https://www.zoho.com/invoice/": {
+  "status": 200,
+  "final": "https://www.zoho.com/us/invoice/",
+  "title": "Free invoicing software for small businesses | Zoho Invoice"
+ },
+ "https://www.paypal.com/us/business/accept-payments/invoice": {
+  "status": 403,
+  "final": "https://www.paypal.com/us/business/accept-payments/invoice",
+  "title": "paypal.com"
+ },
+ "https://stripe.com/invoicing": {
+  "status": 200,
+  "final": "https://stripe.com/invoicing",
+  "title": "Create and Send Invoices Online | Stripe Invoicing"
+ },
+ "https://contracts.freelancersunion.org/": {
+  "error": "ConnectionError"
+ },
+ "https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center": {
+  "status": 200,
+  "final": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center",
+  "title": "Self-employed individuals tax center | Internal Revenue Service"
+ },
+ "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes": {
+  "status": 200,
+  "final": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+  "title": "Estimated taxes | Internal Revenue Service"
+ },
+ "https://www.sba.gov/": {
+  "status": 200,
+  "final": "https://www.sba.gov/",
+  "title": "Homepage - Small Business Administration"
+ },
+ "https://www.score.org/": {
+  "status": 403,
+  "final": "https://www.score.org/",
+  "title": "Just a moment..."
+ },
+ "https://www.ftc.gov/business-guidance/small-businesses": {
+  "status": 404,
+  "final": "https://www.ftc.gov/business-guidance/small-businesses",
+  "title": ""
+ },
+ "https://www.usa.gov/small-claims-court": {
+  "status": 404,
+  "final": "https://www.usa.gov/small-claims-court",
+  "title": "Page not found | USAGov"
+ },
+ "https://invoice-generator.com/": {
+  "status": 200,
+  "final": "https://invoice-generator.com/",
+  "title": "Free Invoice Generator"
+ },
+ "https://www.canva.com/invoices/templates/": {
+  "status": 200,
+  "final": "https://www.canva.com/login/?redirect=%2Finvoices%2Ftemplates%2F",
+  "title": "Login to your Canva account"
+ },
+ "https://www.freelancersunion.org/": {
+  "status": 200,
+  "final": "https://freelancersunion.org/",
+  "title": "Home | Freelancers Union"
+ },
+ "https://www.nolo.com/legal-encyclopedia/small-claims-court": {
+  "status": 403,
+  "final": "https://www.nolo.com/legal-encyclopedia/small-claims-court",
+  "title": "Just a moment..."
+ }
+}
