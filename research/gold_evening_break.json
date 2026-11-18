@@ -1,0 +1,408 @@
+{
+ "15m": {
+  "bars": 4589,
+  "short stop40 tgtNone until02:00": {
+   "n": 20,
+   "win%": 55,
+   "avg_pt": 0.5,
+   "total_pt": 10.0,
+   "total_$MGC": 100,
+   "maxDD_$MGC": 1300,
+   "first": "2026-09-10",
+   "last": "2026-11-17"
+  },
+  "short stop40 tgtNone until09:00": {
+   "n": 24,
+   "win%": 58,
+   "avg_pt": 6.57,
+   "total_pt": 157.7,
+   "total_$MGC": 1577,
+   "maxDD_$MGC": 1852,
+   "first": "2026-09-09",
+   "last": "2026-11-17"
+  },
+  "short stop40 tgt100 until02:00": {
+   "n": 20,
+   "win%": 55,
+   "avg_pt": 0.5,
+   "total_pt": 10.0,
+   "total_$MGC": 100,
+   "maxDD_$MGC": 1300,
+   "first": "2026-09-10",
+   "last": "2026-11-17"
+  },
+  "short stop40 tgt100 until09:00": {
+   "n": 24,
+   "win%": 58,
+   "avg_pt": 6.46,
+   "total_pt": 155.0,
+   "total_$MGC": 1550,
+   "maxDD_$MGC": 1852,
+   "first": "2026-09-09",
+   "last": "2026-11-17"
+  },
+  "short stop20 tgt40 until02:00": {
+   "n": 20,
+   "win%": 50,
+   "avg_pt": -2.32,
+   "total_pt": -46.4,
+   "total_$MGC": -464,
+   "maxDD_$MGC": 1101,
+   "first": "2026-09-10",
+   "last": "2026-11-17"
+  },
+  "short stop20 tgt40 until09:00": {
+   "n": 24,
+   "win%": 42,
+   "avg_pt": 0.19,
+   "total_pt": 4.6,
+   "total_$MGC": 46,
+   "maxDD_$MGC": 1105,
+   "first": "2026-09-09",
+   "last": "2026-11-17"
+  },
+  "short stop15 tgt30 until02:00": {
+   "n": 20,
+   "win%": 35,
+   "avg_pt": -2.94,
+   "total_pt": -58.8,
+   "total_$MGC": -588,
+   "maxDD_$MGC": 1037,
+   "first": "2026-09-10",
+   "last": "2026-11-17"
+  },
+  "short stop15 tgt30 until09:00": {
+   "n": 24,
+   "win%": 38,
+   "avg_pt": -1.04,
+   "total_pt": -25.0,
+   "total_$MGC": -250,
+   "maxDD_$MGC": 1100,
+   "first": "2026-09-09",
+   "last": "2026-11-17"
+  },
+  "short stop10 tgt20 until02:00": {
+   "n": 20,
+   "win%": 20,
+   "avg_pt": -4.5,
+   "total_pt": -90.0,
+   "total_$MGC": -900,
+   "maxDD_$MGC": 1095,
+   "first": "2026-09-10",
+   "last": "2026-11-17"
+  },
+  "short stop10 tgt20 until09:00": {
+   "n": 24,
+   "win%": 21,
+   "avg_pt": -4.25,
+   "total_pt": -102.0,
+   "total_$MGC": -1020,
+   "maxDD_$MGC": 1410,
+   "first": "2026-09-09",
+   "last": "2026-11-17"
+  },
+  "long stop40 tgtNone until02:00": {
+   "n": 10,
+   "win%": 40,
+   "avg_pt": 5.88,
+   "total_pt": 58.8,
+   "total_$MGC": 588,
+   "maxDD_$MGC": 979,
+   "first": "2026-09-15",
+   "last": "2026-11-06"
+  },
+  "long stop40 tgtNone until09:00": {
+   "n": 17,
+   "win%": 47,
+   "avg_pt": 4.37,
+   "total_pt": 74.3,
+   "total_$MGC": 743,
+   "maxDD_$MGC": 1147,
+   "first": "2026-09-09",
+   "last": "2026-11-06"
+  },
+  "long stop40 tgt100 until02:00": {
+   "n": 10,
+   "win%": 40,
+   "avg_pt": 5.88,
+   "total_pt": 58.8,
+   "total_$MGC": 588,
+   "maxDD_$MGC": 979,
+   "first": "2026-09-15",
+   "last": "2026-11-06"
+  },
+  "long stop40 tgt100 until09:00": {
+   "n": 17,
+   "win%": 47,
+   "avg_pt": 4.37,
+   "total_pt": 74.3,
+   "total_$MGC": 743,
+   "maxDD_$MGC": 1147,
+   "first": "2026-09-09",
+   "last": "2026-11-06"
+  },
+  "long stop20 tgt40 until02:00": {
+   "n": 10,
+   "win%": 40,
+   "avg_pt": 5.57,
+   "total_pt": 55.7,
+   "total_$MGC": 557,
+   "maxDD_$MGC": 632,
+   "first": "2026-09-15",
+   "last": "2026-11-06"
+  },
+  "long stop20 tgt40 until09:00": {
+   "n": 17,
+   "win%": 35,
+   "avg_pt": 0.05,
+   "total_pt": 0.9,
+   "total_$MGC": 9,
+   "maxDD_$MGC": 822,
+   "first": "2026-09-09",
+   "last": "2026-11-06"
+  },
+  "long stop15 tgt30 until02:00": {
+   "n": 10,
+   "win%": 40,
+   "avg_pt": 3.18,
+   "total_pt": 31.8,
+   "total_$MGC": 318,
+   "maxDD_$MGC": 482,
+   "first": "2026-09-15",
+   "last": "2026-11-06"
+  },
+  "long stop15 tgt30 until09:00": {
+   "n": 17,
+   "win%": 24,
+   "avg_pt": -2.86,
+   "total_pt": -48.6,
+   "total_$MGC": -486,
+   "maxDD_$MGC": 1061,
+   "first": "2026-09-09",
+   "last": "2026-11-06"
+  },
+  "long stop10 tgt20 until02:00": {
+   "n": 10,
+   "win%": 30,
+   "avg_pt": -1.5,
+   "total_pt": -15.0,
+   "total_$MGC": -150,
+   "maxDD_$MGC": 630,
+   "first": "2026-09-15",
+   "last": "2026-11-06"
+  },
+  "long stop10 tgt20 until09:00": {
+   "n": 17,
+   "win%": 18,
+   "avg_pt": -4.35,
+   "total_pt": -73.9,
+   "total_$MGC": -739,
+   "maxDD_$MGC": 1024,
+   "first": "2026-09-09",
+   "last": "2026-11-06"
+  }
+ },
+ "60m": {
+  "bars": 13678,
+  "short stop40 tgtNone until02:00": {
+   "n": 143,
+   "win%": 39,
+   "avg_pt": -5.53,
+   "total_pt": -790.9,
+   "total_$MGC": -7909,
+   "maxDD_$MGC": 9269,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "short stop40 tgtNone until09:00": {
+   "n": 199,
+   "win%": 34,
+   "avg_pt": -6.29,
+   "total_pt": -1252.3,
+   "total_$MGC": -12523,
+   "maxDD_$MGC": 15822,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "short stop40 tgt100 until02:00": {
+   "n": 143,
+   "win%": 40,
+   "avg_pt": -5.0,
+   "total_pt": -715.1,
+   "total_$MGC": -7151,
+   "maxDD_$MGC": 8511,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "short stop40 tgt100 until09:00": {
+   "n": 199,
+   "win%": 35,
+   "avg_pt": -4.82,
+   "total_pt": -960.1,
+   "total_$MGC": -9601,
+   "maxDD_$MGC": 12900,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "short stop20 tgt40 until02:00": {
+   "n": 143,
+   "win%": 31,
+   "avg_pt": -4.67,
+   "total_pt": -667.1,
+   "total_$MGC": -6671,
+   "maxDD_$MGC": 7199,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "short stop20 tgt40 until09:00": {
+   "n": 199,
+   "win%": 27,
+   "avg_pt": -5.29,
+   "total_pt": -1052.5,
+   "total_$MGC": -10525,
+   "maxDD_$MGC": 11874,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "short stop15 tgt30 until02:00": {
+   "n": 143,
+   "win%": 24,
+   "avg_pt": -5.59,
+   "total_pt": -799.3,
+   "total_$MGC": -7993,
+   "maxDD_$MGC": 8424,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "short stop15 tgt30 until09:00": {
+   "n": 199,
+   "win%": 22,
+   "avg_pt": -6.1,
+   "total_pt": -1213.1,
+   "total_$MGC": -12131,
+   "maxDD_$MGC": 12610,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "short stop10 tgt20 until02:00": {
+   "n": 143,
+   "win%": 13,
+   "avg_pt": -6.58,
+   "total_pt": -940.3,
+   "total_$MGC": -9403,
+   "maxDD_$MGC": 9543,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "short stop10 tgt20 until09:00": {
+   "n": 199,
+   "win%": 14,
+   "avg_pt": -6.7,
+   "total_pt": -1333.6,
+   "total_$MGC": -13336,
+   "maxDD_$MGC": 13337,
+   "first": "2024-06-28",
+   "last": "2026-11-17"
+  },
+  "long stop40 tgtNone until02:00": {
+   "n": 194,
+   "win%": 52,
+   "avg_pt": 2.88,
+   "total_pt": 558.3,
+   "total_$MGC": 5583,
+   "maxDD_$MGC": 1996,
+   "first": "2024-07-16",
+   "last": "2026-11-06"
+  },
+  "long stop40 tgtNone until09:00": {
+   "n": 262,
+   "win%": 56,
+   "avg_pt": 5.43,
+   "total_pt": 1423.2,
+   "total_$MGC": 14232,
+   "maxDD_$MGC": 2486,
+   "first": "2024-06-27",
+   "last": "2026-11-06"
+  },
+  "long stop40 tgt100 until02:00": {
+   "n": 194,
+   "win%": 52,
+   "avg_pt": 2.83,
+   "total_pt": 548.8,
+   "total_$MGC": 5488,
+   "maxDD_$MGC": 1996,
+   "first": "2024-07-16",
+   "last": "2026-11-06"
+  },
+  "long stop40 tgt100 until09:00": {
+   "n": 262,
+   "win%": 56,
+   "avg_pt": 5.66,
+   "total_pt": 1482.0,
+   "total_$MGC": 14820,
+   "maxDD_$MGC": 2238,
+   "first": "2024-06-27",
+   "last": "2026-11-06"
+  },
+  "long stop20 tgt40 until02:00": {
+   "n": 194,
+   "win%": 48,
+   "avg_pt": 0.92,
+   "total_pt": 178.1,
+   "total_$MGC": 1781,
+   "maxDD_$MGC": 2773,
+   "first": "2024-07-16",
+   "last": "2026-11-06"
+  },
+  "long stop20 tgt40 until09:00": {
+   "n": 262,
+   "win%": 46,
+   "avg_pt": 1.39,
+   "total_pt": 365.0,
+   "total_$MGC": 3650,
+   "maxDD_$MGC": 4569,
+   "first": "2024-06-27",
+   "last": "2026-11-06"
+  },
+  "long stop15 tgt30 until02:00": {
+   "n": 194,
+   "win%": 44,
+   "avg_pt": -0.6,
+   "total_pt": -116.3,
+   "total_$MGC": -1163,
+   "maxDD_$MGC": 3084,
+   "first": "2024-07-16",
+   "last": "2026-11-06"
+  },
+  "long stop15 tgt30 until09:00": {
+   "n": 262,
+   "win%": 40,
+   "avg_pt": -0.72,
+   "total_pt": -189.2,
+   "total_$MGC": -1892,
+   "maxDD_$MGC": 5968,
+   "first": "2024-06-27",
+   "last": "2026-11-06"
+  },
+  "long stop10 tgt20 until02:00": {
+   "n": 194,
+   "win%": 38,
+   "avg_pt": -1.89,
+   "total_pt": -366.9,
+   "total_$MGC": -3669,
+   "maxDD_$MGC": 4210,
+   "first": "2024-07-16",
+   "last": "2026-11-06"
+  },
+  "long stop10 tgt20 until09:00": {
+   "n": 262,
+   "win%": 33,
+   "avg_pt": -2.04,
+   "total_pt": -534.4,
+   "total_$MGC": -5344,
+   "maxDD_$MGC": 6479,
+   "first": "2024-06-27",
+   "last": "2026-11-06"
+  }
+ }
+}
