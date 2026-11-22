@@ -81,7 +81,7 @@ for s, prod in SERIES.items():
     t0 = int(start) - 2 * 3600
     use_cb = False   # Bitstamp: 1000 one-minute bars per call, fast; Coinbase's ranged candle calls stalled from Actions
     calls = 0
-    while t0 < now:
+    while t0 < int(now) - 60:
         if use_cb:
             t1 = min(t0 + 300 * 60, int(now))
             j = get(f"{CB}/products/{prod}/candles", {"granularity": 60,
