@@ -1,0 +1,537 @@
+{
+ "days": 30,
+ "markets": 8544,
+ "with_candles": 8542,
+ "tests": {
+  "chance 25-35%, 10-14 min left (the lead)": {
+   "n": 6391,
+   "win_%": 31.7,
+   "avg_price_c": 31.1,
+   "avg_pnl_$": -0.048,
+   "total_$": -307.0,
+   "ci95_avg_$": [
+    -0.105,
+    0.009
+   ],
+   "by_week_avg_$": {
+    "week1": -0.004,
+    "week2": -0.063,
+    "week3": -0.128,
+    "week4": 0.01,
+    "week5": -0.079
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.056,
+    "KXETH15M": -0.052,
+    "KXSOL15M": -0.036
+   }
+  },
+  "chance 25-35%, 5-9 min left": {
+   "n": 4781,
+   "win_%": 30.6,
+   "avg_price_c": 30.5,
+   "avg_pnl_$": -0.073,
+   "total_$": -348.23,
+   "ci95_avg_$": [
+    -0.138,
+    -0.008
+   ],
+   "by_week_avg_$": {
+    "week1": -0.112,
+    "week2": -0.099,
+    "week3": -0.03,
+    "week4": -0.034,
+    "week5": -0.117
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.041,
+    "KXETH15M": -0.094,
+    "KXSOL15M": -0.084
+   }
+  },
+  "chance 25-35%, 1-4 min left": {
+   "n": 2016,
+   "win_%": 29.3,
+   "avg_price_c": 30.5,
+   "avg_pnl_$": -0.137,
+   "total_$": -275.87,
+   "ci95_avg_$": [
+    -0.236,
+    -0.038
+   ],
+   "by_week_avg_$": {
+    "week1": -0.217,
+    "week2": -0.118,
+    "week3": -0.058,
+    "week4": -0.098,
+    "week5": -0.306
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.125,
+    "KXETH15M": -0.166,
+    "KXSOL15M": -0.116
+   }
+  },
+  "chance 5-15%, 10-14 min left": {
+   "n": 1903,
+   "win_%": 11.7,
+   "avg_price_c": 12.3,
+   "avg_pnl_$": -0.069,
+   "total_$": -131.68,
+   "ci95_avg_$": [
+    -0.141,
+    0.003
+   ],
+   "by_week_avg_$": {
+    "week1": -0.069,
+    "week2": -0.0,
+    "week3": -0.155,
+    "week4": -0.012,
+    "week5": -0.196
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.073,
+    "KXETH15M": -0.062,
+    "KXSOL15M": -0.073
+   }
+  },
+  "chance 15-25%, 10-14 min left": {
+   "n": 4157,
+   "win_%": 22.5,
+   "avg_price_c": 21.5,
+   "avg_pnl_$": -0.01,
+   "total_$": -41.78,
+   "ci95_avg_$": [
+    -0.073,
+    0.053
+   ],
+   "by_week_avg_$": {
+    "week1": 0.106,
+    "week2": -0.04,
+    "week3": -0.166,
+    "week4": 0.056,
+    "week5": 0.044
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": 0.027,
+    "KXETH15M": -0.051,
+    "KXSOL15M": -0.005
+   }
+  },
+  "chance 25-35%, 10-14 min left": {
+   "n": 6391,
+   "win_%": 31.7,
+   "avg_price_c": 31.1,
+   "avg_pnl_$": -0.048,
+   "total_$": -307.0,
+   "ci95_avg_$": [
+    -0.105,
+    0.009
+   ],
+   "by_week_avg_$": {
+    "week1": -0.004,
+    "week2": -0.063,
+    "week3": -0.128,
+    "week4": 0.01,
+    "week5": -0.079
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.056,
+    "KXETH15M": -0.052,
+    "KXSOL15M": -0.036
+   }
+  },
+  "chance 35-45%, 10-14 min left": {
+   "n": 8235,
+   "win_%": 41.3,
+   "avg_price_c": 40.7,
+   "avg_pnl_$": -0.062,
+   "total_$": -510.6,
+   "ci95_avg_$": [
+    -0.115,
+    -0.009
+   ],
+   "by_week_avg_$": {
+    "week1": -0.071,
+    "week2": -0.047,
+    "week3": -0.148,
+    "week4": 0.011,
+    "week5": -0.044
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.049,
+    "KXETH15M": -0.093,
+    "KXSOL15M": -0.045
+   }
+  },
+  "chance 45-55%, 10-14 min left": {
+   "n": 9055,
+   "win_%": 50.0,
+   "avg_price_c": 50.5,
+   "avg_pnl_$": -0.119,
+   "total_$": -1075.25,
+   "ci95_avg_$": [
+    -0.17,
+    -0.067
+   ],
+   "by_week_avg_$": {
+    "week1": -0.123,
+    "week2": -0.11,
+    "week3": -0.124,
+    "week4": -0.117,
+    "week5": -0.125
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.115,
+    "KXETH15M": -0.118,
+    "KXSOL15M": -0.123
+   }
+  },
+  "chance 55-65%, 10-14 min left": {
+   "n": 8220,
+   "win_%": 58.6,
+   "avg_price_c": 60.3,
+   "avg_pnl_$": -0.176,
+   "total_$": -1446.92,
+   "ci95_avg_$": [
+    -0.229,
+    -0.123
+   ],
+   "by_week_avg_$": {
+    "week1": -0.171,
+    "week2": -0.189,
+    "week3": -0.084,
+    "week4": -0.251,
+    "week5": -0.199
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.18,
+    "KXETH15M": -0.147,
+    "KXSOL15M": -0.201
+   }
+  },
+  "chance 65-75%, 10-14 min left": {
+   "n": 6422,
+   "win_%": 68.2,
+   "avg_price_c": 69.9,
+   "avg_pnl_$": -0.167,
+   "total_$": -1069.31,
+   "ci95_avg_$": [
+    -0.223,
+    -0.11
+   ],
+   "by_week_avg_$": {
+    "week1": -0.201,
+    "week2": -0.15,
+    "week3": -0.087,
+    "week4": -0.236,
+    "week5": -0.135
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.15,
+    "KXETH15M": -0.155,
+    "KXSOL15M": -0.193
+   }
+  },
+  "chance 75-85%, 10-14 min left": {
+   "n": 4187,
+   "win_%": 77.4,
+   "avg_price_c": 79.6,
+   "avg_pnl_$": -0.172,
+   "total_$": -719.02,
+   "ci95_avg_$": [
+    -0.235,
+    -0.109
+   ],
+   "by_week_avg_$": {
+    "week1": -0.289,
+    "week2": -0.137,
+    "week3": -0.01,
+    "week4": -0.241,
+    "week5": -0.247
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.205,
+    "KXETH15M": -0.126,
+    "KXSOL15M": -0.185
+   }
+  },
+  "chance 85-95%, 10-14 min left": {
+   "n": 1917,
+   "win_%": 88.3,
+   "avg_price_c": 88.6,
+   "avg_pnl_$": -0.053,
+   "total_$": -100.99,
+   "ci95_avg_$": [
+    -0.124,
+    0.019
+   ],
+   "by_week_avg_$": {
+    "week1": -0.062,
+    "week2": -0.119,
+    "week3": 0.032,
+    "week4": -0.104,
+    "week5": 0.079
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.049,
+    "KXETH15M": -0.062,
+    "KXSOL15M": -0.047
+   }
+  },
+  "chance 95-105%, 10-14 min left": {
+   "n": 208,
+   "win_%": 96.6,
+   "avg_price_c": 96.2,
+   "avg_pnl_$": 0.003,
+   "total_$": 0.53,
+   "ci95_avg_$": [
+    -0.12,
+    0.125
+   ],
+   "by_week_avg_$": {
+    "week1": 0.169,
+    "week2": 0.066,
+    "week3": -0.12,
+    "week4": -0.009,
+    "week5": -0.294
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": 0.175,
+    "KXETH15M": -0.107,
+    "KXSOL15M": 0.041
+   }
+  },
+  "chance 5-15%, any time": {
+   "n": 7586,
+   "win_%": 11.0,
+   "avg_price_c": 11.3,
+   "avg_pnl_$": -0.051,
+   "total_$": -389.44,
+   "ci95_avg_$": [
+    -0.086,
+    -0.016
+   ],
+   "by_week_avg_$": {
+    "week1": -0.026,
+    "week2": -0.032,
+    "week3": -0.071,
+    "week4": -0.048,
+    "week5": -0.156
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.054,
+    "KXETH15M": -0.047,
+    "KXSOL15M": -0.054
+   }
+  },
+  "chance 15-25%, any time": {
+   "n": 8209,
+   "win_%": 21.2,
+   "avg_price_c": 21.2,
+   "avg_pnl_$": -0.06,
+   "total_$": -491.31,
+   "ci95_avg_$": [
+    -0.104,
+    -0.016
+   ],
+   "by_week_avg_$": {
+    "week1": -0.018,
+    "week2": -0.061,
+    "week3": -0.133,
+    "week4": -0.021,
+    "week5": -0.087
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.06,
+    "KXETH15M": -0.065,
+    "KXSOL15M": -0.054
+   }
+  },
+  "chance 25-35%, any time": {
+   "n": 9291,
+   "win_%": 30.7,
+   "avg_price_c": 31.0,
+   "avg_pnl_$": -0.092,
+   "total_$": -856.07,
+   "ci95_avg_$": [
+    -0.139,
+    -0.045
+   ],
+   "by_week_avg_$": {
+    "week1": -0.081,
+    "week2": -0.114,
+    "week3": -0.109,
+    "week4": -0.045,
+    "week5": -0.169
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.094,
+    "KXETH15M": -0.106,
+    "KXSOL15M": -0.077
+   }
+  },
+  "chance 35-45%, any time": {
+   "n": 10408,
+   "win_%": 40.9,
+   "avg_price_c": 40.7,
+   "avg_pnl_$": -0.08,
+   "total_$": -831.12,
+   "ci95_avg_$": [
+    -0.127,
+    -0.033
+   ],
+   "by_week_avg_$": {
+    "week1": -0.086,
+    "week2": -0.083,
+    "week3": -0.152,
+    "week4": -0.0,
+    "week5": -0.078
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.07,
+    "KXETH15M": -0.095,
+    "KXSOL15M": -0.075
+   }
+  },
+  "chance 45-55%, any time": {
+   "n": 10898,
+   "win_%": 50.0,
+   "avg_price_c": 50.5,
+   "avg_pnl_$": -0.117,
+   "total_$": -1279.62,
+   "ci95_avg_$": [
+    -0.164,
+    -0.071
+   ],
+   "by_week_avg_$": {
+    "week1": -0.118,
+    "week2": -0.114,
+    "week3": -0.12,
+    "week4": -0.117,
+    "week5": -0.12
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.115,
+    "KXETH15M": -0.116,
+    "KXSOL15M": -0.121
+   }
+  },
+  "chance 55-65%, any time": {
+   "n": 10399,
+   "win_%": 58.9,
+   "avg_price_c": 60.4,
+   "avg_pnl_$": -0.16,
+   "total_$": -1660.54,
+   "ci95_avg_$": [
+    -0.207,
+    -0.112
+   ],
+   "by_week_avg_$": {
+    "week1": -0.156,
+    "week2": -0.148,
+    "week3": -0.085,
+    "week4": -0.247,
+    "week5": -0.166
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.16,
+    "KXETH15M": -0.137,
+    "KXSOL15M": -0.182
+   }
+  },
+  "chance 65-75%, any time": {
+   "n": 9325,
+   "win_%": 69.2,
+   "avg_price_c": 70.1,
+   "avg_pnl_$": -0.122,
+   "total_$": -1141.99,
+   "ci95_avg_$": [
+    -0.169,
+    -0.076
+   ],
+   "by_week_avg_$": {
+    "week1": -0.134,
+    "week2": -0.102,
+    "week3": -0.107,
+    "week4": -0.168,
+    "week5": -0.041
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.111,
+    "KXETH15M": -0.106,
+    "KXSOL15M": -0.15
+   }
+  },
+  "chance 75-85%, any time": {
+   "n": 8226,
+   "win_%": 78.6,
+   "avg_price_c": 79.9,
+   "avg_pnl_$": -0.126,
+   "total_$": -1038.0,
+   "ci95_avg_$": [
+    -0.17,
+    -0.082
+   ],
+   "by_week_avg_$": {
+    "week1": -0.166,
+    "week2": -0.122,
+    "week3": -0.054,
+    "week4": -0.169,
+    "week5": -0.105
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.116,
+    "KXETH15M": -0.116,
+    "KXSOL15M": -0.146
+   }
+  },
+  "chance 85-95%, any time": {
+   "n": 7610,
+   "win_%": 88.9,
+   "avg_price_c": 89.5,
+   "avg_pnl_$": -0.064,
+   "total_$": -484.56,
+   "ci95_avg_$": [
+    -0.099,
+    -0.029
+   ],
+   "by_week_avg_$": {
+    "week1": -0.089,
+    "week2": -0.079,
+    "week3": -0.05,
+    "week4": -0.064,
+    "week5": 0.039
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.056,
+    "KXETH15M": -0.067,
+    "KXSOL15M": -0.068
+   }
+  },
+  "chance 95-105%, any time": {
+   "n": 7147,
+   "win_%": 97.7,
+   "avg_price_c": 97.4,
+   "avg_pnl_$": 0.002,
+   "total_$": 14.45,
+   "ci95_avg_$": [
+    -0.015,
+    0.019
+   ],
+   "by_week_avg_$": {
+    "week1": 0.007,
+    "week2": -0.006,
+    "week3": 0.014,
+    "week4": -0.011,
+    "week5": 0.018
+   },
+   "by_coin_avg_$": {
+    "KXBTC15M": -0.001,
+    "KXETH15M": -0.002,
+    "KXSOL15M": 0.009
+   }
+  }
+ },
+ "generated_utc": "2026-11-22T17:26:15+00:00"
+}
