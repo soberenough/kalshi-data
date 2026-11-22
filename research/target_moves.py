@@ -35,7 +35,7 @@ BS = {"BTC-USD": "btcusd", "ETH-USD": "ethusd", "SOL-USD": "solusd"}   # Bitstam
 def get(url, params=None, tries=5):
     for i in range(tries):
         try:
-            r = requests.get(url, params=params, headers=UA, timeout=25)
+            r = requests.get(url, params=params, headers=UA, timeout=10)
             if r.status_code == 429 or r.status_code >= 500:
                 time.sleep(2 * (i + 1)); continue
             r.raise_for_status(); return r.json()
@@ -79,9 +79,8 @@ px, source = {}, {}
 for s, prod in SERIES.items():
     d = {}
     t0 = int(start) - 2 * 3600
-    probe = get(f"{CB}/products/{prod}/candles", {"granularity": 60}, tries=2)
-    use_cb = bool(probe)
-    print(prod, "Coinbase reachable" if use_cb else "Coinbase not reachable, using Bitstamp")
+    use_cb = False   # Bitstamp: 1000 one-minute bars per call, fast; Coinbase's ranged candle calls stalled from Actions
+    calls = 0
     while t0 < now:
         if use_cb:
             t1 = min(t0 + 300 * 60, int(now))
@@ -95,7 +94,8 @@ for s, prod in SERIES.items():
             j = get(f"https://www.bitstamp.net/api/v2/ohlc/{BS[prod]}/", {"step": 60, "limit": 1000, "start": t0}, tries=2) or {}
             for c in (j.get("data") or {}).get("ohlc", []):
                 d[int(c["timestamp"])] = float(c["close"])
-        t0 = t1; time.sleep(0.15)
+        t0 = t1; time.sleep(0.15); calls += 1
+        if calls % 3 == 0: print(f"  {prod}: {calls} calls, {len(d)} minutes", flush=True)
     px[s] = d; source[s] = "coinbase" if use_cb else "bitstamp"
     print(prod, len(d), "minutes from", source[s])
 
