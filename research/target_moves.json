@@ -1,0 +1,379 @@
+{
+ "window_days": 3,
+ "markets": 864,
+ "price_source": {
+  "KXBTC15M": "bitstamp",
+  "KXETH15M": "bitstamp",
+  "KXSOL15M": "bitstamp"
+ },
+ "by_series": {
+  "KXBTC15M": {
+   "markets": 288,
+   "yes_%": 43.8,
+   "target_minus_open_bp": {
+    "median": 1.69,
+    "p10": -10.67,
+    "p90": 16.26
+   },
+   "coinbase_agrees_with_settlement_%": 87.5,
+   "model_calibration": {
+    "0-10": {
+     "n": 388,
+     "model_mid": 5,
+     "won_%": 2.6
+    },
+    "10-20": {
+     "n": 139,
+     "model_mid": 15,
+     "won_%": 7.2
+    },
+    "20-30": {
+     "n": 183,
+     "model_mid": 25,
+     "won_%": 13.1
+    },
+    "30-40": {
+     "n": 186,
+     "model_mid": 35,
+     "won_%": 29.0
+    },
+    "40-50": {
+     "n": 216,
+     "model_mid": 45,
+     "won_%": 45.4
+    },
+    "50-60": {
+     "n": 214,
+     "model_mid": 55,
+     "won_%": 48.6
+    },
+    "60-70": {
+     "n": 157,
+     "model_mid": 65,
+     "won_%": 61.1
+    },
+    "70-80": {
+     "n": 106,
+     "model_mid": 75,
+     "won_%": 73.6
+    },
+    "80-90": {
+     "n": 115,
+     "model_mid": 85,
+     "won_%": 87.8
+    },
+    "90-100": {
+     "n": 308,
+     "model_mid": 95,
+     "won_%": 98.4
+    }
+   },
+   "by_minutes_left": {
+    "14": {
+     "n": 288,
+     "brier": 0.2301,
+     "decided_%": 0.3
+    },
+    "10": {
+     "n": 288,
+     "brier": 0.2016,
+     "decided_%": 11.1
+    },
+    "7": {
+     "n": 288,
+     "brier": 0.1449,
+     "decided_%": 24.7
+    },
+    "5": {
+     "n": 288,
+     "brier": 0.1262,
+     "decided_%": 37.5
+    },
+    "3": {
+     "n": 288,
+     "brier": 0.0977,
+     "decided_%": 47.2
+    },
+    "2": {
+     "n": 288,
+     "brier": 0.0736,
+     "decided_%": 56.2
+    },
+    "1": {
+     "n": 288,
+     "brier": 0.0438,
+     "decided_%": 66.0
+    }
+   }
+  },
+  "KXETH15M": {
+   "markets": 288,
+   "yes_%": 49.7,
+   "target_minus_open_bp": {
+    "median": 3.86,
+    "p10": -10.21,
+    "p90": 19.11
+   },
+   "coinbase_agrees_with_settlement_%": 89.9,
+   "model_calibration": {
+    "0-10": {
+     "n": 365,
+     "model_mid": 5,
+     "won_%": 2.5
+    },
+    "10-20": {
+     "n": 166,
+     "model_mid": 15,
+     "won_%": 18.1
+    },
+    "20-30": {
+     "n": 177,
+     "model_mid": 25,
+     "won_%": 28.8
+    },
+    "30-40": {
+     "n": 193,
+     "model_mid": 35,
+     "won_%": 36.3
+    },
+    "40-50": {
+     "n": 259,
+     "model_mid": 45,
+     "won_%": 51.4
+    },
+    "50-60": {
+     "n": 234,
+     "model_mid": 55,
+     "won_%": 62.0
+    },
+    "60-70": {
+     "n": 138,
+     "model_mid": 65,
+     "won_%": 75.4
+    },
+    "70-80": {
+     "n": 119,
+     "model_mid": 75,
+     "won_%": 84.0
+    },
+    "80-90": {
+     "n": 105,
+     "model_mid": 85,
+     "won_%": 97.1
+    },
+    "90-100": {
+     "n": 258,
+     "model_mid": 95,
+     "won_%": 98.8
+    }
+   },
+   "by_minutes_left": {
+    "14": {
+     "n": 288,
+     "brier": 0.2348,
+     "decided_%": 0.3
+    },
+    "10": {
+     "n": 288,
+     "brier": 0.2005,
+     "decided_%": 9.7
+    },
+    "7": {
+     "n": 288,
+     "brier": 0.1651,
+     "decided_%": 21.9
+    },
+    "5": {
+     "n": 288,
+     "brier": 0.1395,
+     "decided_%": 30.9
+    },
+    "3": {
+     "n": 288,
+     "brier": 0.1043,
+     "decided_%": 41.0
+    },
+    "2": {
+     "n": 288,
+     "brier": 0.0906,
+     "decided_%": 50.0
+    },
+    "1": {
+     "n": 288,
+     "brier": 0.0617,
+     "decided_%": 63.2
+    }
+   }
+  },
+  "KXSOL15M": {
+   "markets": 288,
+   "yes_%": 48.3,
+   "target_minus_open_bp": {
+    "median": 2.87,
+    "p10": -10.32,
+    "p90": 20.28
+   },
+   "coinbase_agrees_with_settlement_%": 86.8,
+   "model_calibration": {
+    "0-10": {
+     "n": 407,
+     "model_mid": 5,
+     "won_%": 2.0
+    },
+    "10-20": {
+     "n": 156,
+     "model_mid": 15,
+     "won_%": 11.5
+    },
+    "20-30": {
+     "n": 165,
+     "model_mid": 25,
+     "won_%": 15.8
+    },
+    "30-40": {
+     "n": 168,
+     "model_mid": 35,
+     "won_%": 38.7
+    },
+    "40-50": {
+     "n": 228,
+     "model_mid": 45,
+     "won_%": 53.9
+    },
+    "50-60": {
+     "n": 213,
+     "model_mid": 55,
+     "won_%": 57.3
+    },
+    "60-70": {
+     "n": 143,
+     "model_mid": 65,
+     "won_%": 70.6
+    },
+    "70-80": {
+     "n": 117,
+     "model_mid": 75,
+     "won_%": 84.6
+    },
+    "80-90": {
+     "n": 121,
+     "model_mid": 85,
+     "won_%": 95.9
+    },
+    "90-100": {
+     "n": 294,
+     "model_mid": 95,
+     "won_%": 99.0
+    }
+   },
+   "by_minutes_left": {
+    "14": {
+     "n": 288,
+     "brier": 0.2317,
+     "decided_%": 0.0
+    },
+    "10": {
+     "n": 288,
+     "brier": 0.1847,
+     "decided_%": 10.4
+    },
+    "7": {
+     "n": 288,
+     "brier": 0.1416,
+     "decided_%": 26.0
+    },
+    "5": {
+     "n": 288,
+     "brier": 0.1139,
+     "decided_%": 34.0
+    },
+    "3": {
+     "n": 288,
+     "brier": 0.0885,
+     "decided_%": 49.0
+    },
+    "2": {
+     "n": 288,
+     "brier": 0.0718,
+     "decided_%": 58.0
+    },
+    "1": {
+     "n": 288,
+     "brier": 0.0436,
+     "decided_%": 67.4
+    }
+   }
+  }
+ },
+ "snapshots": {
+  "n": 1375,
+  "brier_kalshi_mid": 0.154,
+  "brier_model": 0.1623
+ },
+ "disagree_10c": {
+  "trades": 210,
+  "avg_pnl_per_contract_$": 0.0,
+  "win_rate_%": 31.4
+ },
+ "cheap_contracts": {
+  "0c": {
+   "n": 59,
+   "won": 0,
+   "won_%": 0.0,
+   "breakeven_%": 0.0
+  },
+  "1c": {
+   "n": 67,
+   "won": 0,
+   "won_%": 0.0,
+   "breakeven_%": 1.0
+  },
+  "2c": {
+   "n": 45,
+   "won": 0,
+   "won_%": 0.0,
+   "breakeven_%": 2.0
+  },
+  "3c": {
+   "n": 33,
+   "won": 1,
+   "won_%": 3.03,
+   "breakeven_%": 3.0
+  },
+  "4c": {
+   "n": 33,
+   "won": 3,
+   "won_%": 9.09,
+   "breakeven_%": 4.0
+  },
+  "5c": {
+   "n": 11,
+   "won": 2,
+   "won_%": 18.18,
+   "breakeven_%": 5.0
+  }
+ },
+ "snapshots_by_minutes_left": {
+  "10-15": {
+   "n": 465,
+   "brier_kalshi": 0.206,
+   "brier_model": 0.2102
+  },
+  "5-10": {
+   "n": 495,
+   "brier_kalshi": 0.1546,
+   "brier_model": 0.1622
+  },
+  "2-5": {
+   "n": 275,
+   "brier_kalshi": 0.1084,
+   "brier_model": 0.1152
+  },
+  "0-2": {
+   "n": 140,
+   "brier_kalshi": 0.0689,
+   "brier_model": 0.0958
+  }
+ },
+ "generated_utc": "2026-11-22T15:42:42+00:00"
+}
