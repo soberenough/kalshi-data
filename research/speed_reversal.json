@@ -1,0 +1,331 @@
+{
+ "markets": 8832,
+ "rows": 123648,
+ "speed": {
+  "KXBTC15M": {
+   "median_1min_move_bp": 4.79,
+   "p90_1min_move_bp": 10.62
+  },
+  "KXETH15M": {
+   "median_1min_move_bp": 5.95,
+   "p90_1min_move_bp": 13.43
+  },
+  "KXSOL15M": {
+   "median_1min_move_bp": 6.91,
+   "p90_1min_move_bp": 14.38
+  }
+ },
+ "reversal": {
+  "10-14m |z| 0-0.25": {
+   "n": 16785,
+   "reversal_%": 45.4,
+   "normal_model_%": 45.0
+  },
+  "10-14m |z| 0.25-0.5": {
+   "n": 11978,
+   "reversal_%": 34.4,
+   "normal_model_%": 35.4
+  },
+  "10-14m |z| 0.5-0.75": {
+   "n": 6949,
+   "reversal_%": 27.6,
+   "normal_model_%": 26.6
+  },
+  "10-14m |z| 0.75-1.0": {
+   "n": 3886,
+   "reversal_%": 21.2,
+   "normal_model_%": 19.1
+  },
+  "10-14m |z| 1.0-1.5": {
+   "n": 3230,
+   "reversal_%": 14.1,
+   "normal_model_%": 10.6
+  },
+  "10-14m |z| 1.5-2.0": {
+   "n": 936,
+   "reversal_%": 9.2,
+   "normal_model_%": 4.0
+  },
+  "10-14m |z| 2.0-99": {
+   "n": 396,
+   "reversal_%": 3.3,
+   "normal_model_%": 0.6
+  },
+  "5-9m |z| 0-0.25": {
+   "n": 8471,
+   "reversal_%": 45.0,
+   "normal_model_%": 45.0
+  },
+  "5-9m |z| 0.25-0.5": {
+   "n": 7612,
+   "reversal_%": 33.9,
+   "normal_model_%": 35.4
+  },
+  "5-9m |z| 0.5-0.75": {
+   "n": 6966,
+   "reversal_%": 24.3,
+   "normal_model_%": 26.6
+  },
+  "5-9m |z| 0.75-1.0": {
+   "n": 5528,
+   "reversal_%": 17.2,
+   "normal_model_%": 19.1
+  },
+  "5-9m |z| 1.0-1.5": {
+   "n": 7524,
+   "reversal_%": 9.8,
+   "normal_model_%": 10.6
+  },
+  "5-9m |z| 1.5-2.0": {
+   "n": 3983,
+   "reversal_%": 4.4,
+   "normal_model_%": 4.0
+  },
+  "5-9m |z| 2.0-99": {
+   "n": 4076,
+   "reversal_%": 1.2,
+   "normal_model_%": 0.6
+  },
+  "3-4m |z| 0-0.25": {
+   "n": 2109,
+   "reversal_%": 42.2,
+   "normal_model_%": 45.0
+  },
+  "3-4m |z| 0.25-0.5": {
+   "n": 2030,
+   "reversal_%": 30.2,
+   "normal_model_%": 35.4
+  },
+  "3-4m |z| 0.5-0.75": {
+   "n": 1895,
+   "reversal_%": 20.8,
+   "normal_model_%": 26.6
+  },
+  "3-4m |z| 0.75-1.0": {
+   "n": 1770,
+   "reversal_%": 14.7,
+   "normal_model_%": 19.1
+  },
+  "3-4m |z| 1.0-1.5": {
+   "n": 2925,
+   "reversal_%": 6.8,
+   "normal_model_%": 10.6
+  },
+  "3-4m |z| 1.5-2.0": {
+   "n": 2194,
+   "reversal_%": 3.2,
+   "normal_model_%": 4.0
+  },
+  "3-4m |z| 2.0-99": {
+   "n": 4741,
+   "reversal_%": 0.6,
+   "normal_model_%": 0.6
+  },
+  "1-2m |z| 0-0.25": {
+   "n": 1227,
+   "reversal_%": 43.0,
+   "normal_model_%": 45.0
+  },
+  "1-2m |z| 0.25-0.5": {
+   "n": 1279,
+   "reversal_%": 28.4,
+   "normal_model_%": 35.4
+  },
+  "1-2m |z| 0.5-0.75": {
+   "n": 1230,
+   "reversal_%": 17.3,
+   "normal_model_%": 26.6
+  },
+  "1-2m |z| 0.75-1.0": {
+   "n": 1204,
+   "reversal_%": 9.6,
+   "normal_model_%": 19.1
+  },
+  "1-2m |z| 1.0-1.5": {
+   "n": 2284,
+   "reversal_%": 4.3,
+   "normal_model_%": 10.6
+  },
+  "1-2m |z| 1.5-2.0": {
+   "n": 1933,
+   "reversal_%": 1.7,
+   "normal_model_%": 4.0
+  },
+  "1-2m |z| 2.0-99": {
+   "n": 8507,
+   "reversal_%": 0.1,
+   "normal_model_%": 0.6
+  }
+ },
+ "reversal_by_speed": {
+  "10-14m |z| 0.25-0.75 moving toward": {
+   "n": 213,
+   "reversal_%": 37.6
+  },
+  "10-14m |z| 0.25-0.75 flat": {
+   "n": 10564,
+   "reversal_%": 33.5
+  },
+  "10-14m |z| 0.25-0.75 moving away": {
+   "n": 8150,
+   "reversal_%": 29.8
+  },
+  "10-14m |z| 0.75-1.5 moving toward": {
+   "n": 53,
+   "reversal_%": 18.9
+  },
+  "10-14m |z| 0.75-1.5 flat": {
+   "n": 1555,
+   "reversal_%": 19.0
+  },
+  "10-14m |z| 0.75-1.5 moving away": {
+   "n": 5508,
+   "reversal_%": 17.7
+  },
+  "5-9m |z| 0.25-0.75 moving toward": {
+   "n": 1076,
+   "reversal_%": 35.3
+  },
+  "5-9m |z| 0.25-0.75 flat": {
+   "n": 10509,
+   "reversal_%": 29.1
+  },
+  "5-9m |z| 0.25-0.75 moving away": {
+   "n": 2993,
+   "reversal_%": 28.0
+  },
+  "5-9m |z| 0.75-1.5 moving toward": {
+   "n": 667,
+   "reversal_%": 12.3
+  },
+  "5-9m |z| 0.75-1.5 flat": {
+   "n": 8160,
+   "reversal_%": 13.2
+  },
+  "5-9m |z| 0.75-1.5 moving away": {
+   "n": 4225,
+   "reversal_%": 12.5
+  },
+  "3-4m |z| 0.25-0.75 moving toward": {
+   "n": 401,
+   "reversal_%": 27.7
+  },
+  "3-4m |z| 0.25-0.75 flat": {
+   "n": 2890,
+   "reversal_%": 26.2
+  },
+  "3-4m |z| 0.25-0.75 moving away": {
+   "n": 634,
+   "reversal_%": 22.4
+  },
+  "3-4m |z| 0.75-1.5 moving toward": {
+   "n": 365,
+   "reversal_%": 11.8
+  },
+  "3-4m |z| 0.75-1.5 flat": {
+   "n": 3397,
+   "reversal_%": 9.9
+  },
+  "3-4m |z| 0.75-1.5 moving away": {
+   "n": 933,
+   "reversal_%": 8.7
+  },
+  "1-2m |z| 0.25-0.75 moving toward": {
+   "n": 298,
+   "reversal_%": 26.2
+  },
+  "1-2m |z| 0.25-0.75 flat": {
+   "n": 1807,
+   "reversal_%": 21.9
+  },
+  "1-2m |z| 0.25-0.75 moving away": {
+   "n": 404,
+   "reversal_%": 25.5
+  },
+  "1-2m |z| 0.75-1.5 moving toward": {
+   "n": 342,
+   "reversal_%": 6.7
+  },
+  "1-2m |z| 0.75-1.5 flat": {
+   "n": 2483,
+   "reversal_%": 6.2
+  },
+  "1-2m |z| 0.75-1.5 moving away": {
+   "n": 663,
+   "reversal_%": 5.7
+  }
+ },
+ "reversal_by_context": {
+  "volume surge (>2x)": {
+   "n": 2316,
+   "reversal_%": 18.0
+  },
+  "normal volume": {
+   "n": 33934,
+   "reversal_%": 20.7
+  },
+  "target beyond last hour's range": {
+   "n": 38,
+   "reversal_%": 21.1
+  },
+  "target inside last hour's range": {
+   "n": 36212,
+   "reversal_%": 20.5
+  },
+  "round number in between": {
+   "n": 16667,
+   "reversal_%": 16.8
+  },
+  "no round number in between": {
+   "n": 19583,
+   "reversal_%": 23.7
+  }
+ },
+ "test": {
+  "train_rows": 83664,
+  "test_rows": 38271,
+  "weights": [
+   -0.149,
+   1.8,
+   0.299,
+   -0.275,
+   0.484,
+   -0.078,
+   -0.032,
+   -0.024,
+   0.561
+  ],
+  "brier_model": 0.158,
+  "brier_kalshi": 0.1558,
+  "trades_edge_5c": {
+   "n": 2861,
+   "win_%": 38.8,
+   "avg_$": -0.097,
+   "total_$": -277.51,
+   "ci95": [
+    -0.179,
+    -0.015
+   ]
+  },
+  "trades_edge_10c": {
+   "n": 1008,
+   "win_%": 29.9,
+   "avg_$": -0.059,
+   "total_$": -59.8,
+   "ci95": [
+    -0.188,
+    0.069
+   ]
+  },
+  "trades_edge_15c": {
+   "n": 363,
+   "win_%": 23.4,
+   "avg_$": -0.024,
+   "total_$": -8.57,
+   "ci95": [
+    -0.231,
+    0.184
+   ]
+  }
+ }
+}
