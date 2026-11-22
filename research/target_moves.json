@@ -9,45 +9,45 @@
  "by_series": {
   "KXBTC15M": {
    "markets": 664,
-   "yes_%": 46.1,
+   "yes_%": 46.4,
    "target_minus_open_bp": {
     "median": 0.24,
-    "p10": -1.32,
-    "p90": 1.95
+    "p10": -1.33,
+    "p90": 1.91
    },
-   "composite_agrees_with_settlement_%": 98.3,
-   "composite_alone_agrees_%": 97.3,
+   "composite_agrees_with_settlement_%": 98.5,
+   "composite_alone_agrees_%": 97.4,
    "abs_target_error_bp_median": 0.78,
    "model_calibration": {
     "0-10": {
-     "n": 903,
+     "n": 898,
      "model_mid": 5,
      "won_%": 1.9
     },
     "10-20": {
-     "n": 316,
+     "n": 313,
      "model_mid": 15,
-     "won_%": 8.2
+     "won_%": 8.3
     },
     "20-30": {
      "n": 374,
      "model_mid": 25,
-     "won_%": 16.3
+     "won_%": 16.6
     },
     "30-40": {
-     "n": 434,
+     "n": 432,
      "model_mid": 35,
-     "won_%": 35.0
+     "won_%": 35.4
     },
     "40-50": {
-     "n": 489,
+     "n": 488,
      "model_mid": 45,
-     "won_%": 42.7
+     "won_%": 42.8
     },
     "50-60": {
      "n": 485,
      "model_mid": 55,
-     "won_%": 52.0
+     "won_%": 52.2
     },
     "60-70": {
      "n": 330,
@@ -55,17 +55,17 @@
      "won_%": 67.6
     },
     "70-80": {
-     "n": 289,
+     "n": 290,
      "model_mid": 75,
-     "won_%": 77.5
+     "won_%": 77.6
     },
     "80-90": {
-     "n": 266,
+     "n": 267,
      "model_mid": 85,
-     "won_%": 87.2
+     "won_%": 87.3
     },
     "90-100": {
-     "n": 747,
+     "n": 756,
      "model_mid": 95,
      "won_%": 97.9
     }
@@ -73,33 +73,33 @@
    "by_minutes_left": {
     "14": {
      "n": 664,
-     "brier": 0.2318,
+     "brier": 0.2319,
      "decided_%": 0.5
     },
     "10": {
      "n": 664,
-     "brier": 0.1957,
+     "brier": 0.1965,
      "decided_%": 10.8
     },
     "7": {
      "n": 664,
-     "brier": 0.1462,
-     "decided_%": 25.3
+     "brier": 0.1461,
+     "decided_%": 25.5
     },
     "5": {
      "n": 664,
-     "brier": 0.1274,
-     "decided_%": 36.4
+     "brier": 0.1272,
+     "decided_%": 36.6
     },
     "3": {
      "n": 664,
      "brier": 0.0907,
-     "decided_%": 48.5
+     "decided_%": 48.6
     },
     "2": {
      "n": 664,
      "brier": 0.0706,
-     "decided_%": 59.8
+     "decided_%": 59.9
     },
     "1": {
      "n": 664,
@@ -110,10 +110,10 @@
   },
   "KXETH15M": {
    "markets": 664,
-   "yes_%": 49.5,
+   "yes_%": 49.7,
    "target_minus_open_bp": {
     "median": 1.69,
-    "p10": -1.03,
+    "p10": -1.01,
     "p90": 3.82
    },
    "composite_agrees_with_settlement_%": 95.9,
@@ -121,14 +121,14 @@
    "abs_target_error_bp_median": 1.87,
    "model_calibration": {
     "0-10": {
-     "n": 887,
+     "n": 886,
      "model_mid": 5,
      "won_%": 3.2
     },
     "10-20": {
-     "n": 362,
+     "n": 360,
      "model_mid": 15,
-     "won_%": 15.2
+     "won_%": 15.3
     },
     "20-30": {
      "n": 376,
@@ -136,29 +136,29 @@
      "won_%": 25.5
     },
     "30-40": {
-     "n": 429,
+     "n": 425,
      "model_mid": 35,
-     "won_%": 33.3
+     "won_%": 32.9
     },
     "40-50": {
-     "n": 531,
+     "n": 529,
      "model_mid": 45,
-     "won_%": 50.5
+     "won_%": 50.9
     },
     "50-60": {
-     "n": 462,
+     "n": 465,
      "model_mid": 55,
-     "won_%": 60.0
+     "won_%": 60.2
     },
     "60-70": {
-     "n": 354,
+     "n": 357,
      "model_mid": 65,
-     "won_%": 72.9
+     "won_%": 73.1
     },
     "70-80": {
-     "n": 272,
+     "n": 275,
      "model_mid": 75,
-     "won_%": 83.5
+     "won_%": 83.6
     },
     "80-90": {
      "n": 280,
@@ -174,100 +174,100 @@
    "by_minutes_left": {
     "14": {
      "n": 664,
-     "brier": 0.228,
+     "brier": 0.2286,
      "decided_%": 0.5
     },
     "10": {
      "n": 664,
-     "brier": 0.1936,
+     "brier": 0.1941,
      "decided_%": 11.6
     },
     "7": {
      "n": 664,
-     "brier": 0.1545,
+     "brier": 0.154,
      "decided_%": 23.2
     },
     "5": {
      "n": 664,
-     "brier": 0.1298,
+     "brier": 0.1291,
      "decided_%": 33.9
     },
     "3": {
      "n": 664,
-     "brier": 0.0971,
+     "brier": 0.0969,
      "decided_%": 45.2
     },
     "2": {
      "n": 664,
-     "brier": 0.0787,
+     "brier": 0.0781,
      "decided_%": 56.6
     },
     "1": {
      "n": 664,
-     "brier": 0.0512,
-     "decided_%": 67.3
+     "brier": 0.0514,
+     "decided_%": 67.2
     }
    }
   },
   "KXSOL15M": {
    "markets": 664,
-   "yes_%": 49.2,
+   "yes_%": 49.4,
    "target_minus_open_bp": {
     "median": 1.88,
-    "p10": -0.36,
-    "p90": 4.02
+    "p10": -0.35,
+    "p90": 4.01
    },
    "composite_agrees_with_settlement_%": 97.6,
    "composite_alone_agrees_%": 97.6,
    "abs_target_error_bp_median": 1.99,
    "model_calibration": {
     "0-10": {
-     "n": 913,
+     "n": 912,
      "model_mid": 5,
-     "won_%": 2.8
+     "won_%": 2.9
     },
     "10-20": {
-     "n": 339,
+     "n": 340,
      "model_mid": 15,
-     "won_%": 12.4
+     "won_%": 12.6
     },
     "20-30": {
-     "n": 375,
+     "n": 374,
      "model_mid": 25,
      "won_%": 20.3
     },
     "30-40": {
-     "n": 409,
+     "n": 406,
      "model_mid": 35,
-     "won_%": 38.1
+     "won_%": 38.4
     },
     "40-50": {
-     "n": 504,
+     "n": 501,
      "model_mid": 45,
-     "won_%": 48.2
+     "won_%": 48.1
     },
     "50-60": {
-     "n": 396,
+     "n": 397,
      "model_mid": 55,
-     "won_%": 59.1
+     "won_%": 59.2
     },
     "60-70": {
      "n": 350,
      "model_mid": 65,
-     "won_%": 69.1
+     "won_%": 69.4
     },
     "70-80": {
-     "n": 291,
+     "n": 293,
      "model_mid": 75,
-     "won_%": 80.1
+     "won_%": 80.2
     },
     "80-90": {
-     "n": 285,
+     "n": 288,
      "model_mid": 85,
-     "won_%": 91.9
+     "won_%": 92.0
     },
     "90-100": {
-     "n": 770,
+     "n": 771,
      "model_mid": 95,
      "won_%": 98.6
     }
@@ -275,38 +275,38 @@
    "by_minutes_left": {
     "14": {
      "n": 664,
-     "brier": 0.2359,
+     "brier": 0.2364,
      "decided_%": 0.3
     },
     "10": {
      "n": 664,
-     "brier": 0.195,
+     "brier": 0.1957,
      "decided_%": 11.1
     },
     "7": {
      "n": 664,
-     "brier": 0.1489,
+     "brier": 0.1488,
      "decided_%": 26.2
     },
     "5": {
      "n": 664,
-     "brier": 0.123,
+     "brier": 0.1221,
      "decided_%": 36.3
     },
     "3": {
      "n": 664,
-     "brier": 0.0898,
+     "brier": 0.0895,
      "decided_%": 50.5
     },
     "2": {
      "n": 664,
-     "brier": 0.0663,
-     "decided_%": 60.4
+     "brier": 0.066,
+     "decided_%": 60.5
     },
     "1": {
      "n": 664,
      "brier": 0.0368,
-     "decided_%": 71.1
+     "decided_%": 70.9
     }
    }
   }
@@ -314,16 +314,16 @@
  "snapshots": {
   "n": 3153,
   "brier_kalshi_mid": 0.1553,
-  "brier_model": 0.164
+  "brier_model": 0.1635
  },
  "disagree_10c": {
-  "trades": 483,
-  "avg_pnl_per_contract_$": -0.0587,
-  "win_rate_%": 25.9
+  "trades": 482,
+  "avg_pnl_per_contract_$": -0.0531,
+  "win_rate_%": 26.3
  },
  "cheap_contracts": {
   "0c": {
-   "n": 144,
+   "n": 145,
    "won": 1,
    "won_%": 0.69,
    "breakeven_%": 0.0
@@ -347,9 +347,9 @@
    "breakeven_%": 3.0
   },
   "4c": {
-   "n": 73,
+   "n": 74,
    "won": 4,
-   "won_%": 5.48,
+   "won_%": 5.41,
    "breakeven_%": 4.0
   },
   "5c": {
@@ -361,14 +361,14 @@
  },
  "snapshots_by_minutes_left": {
   "10-15": {
-   "n": 1053,
-   "brier_kalshi": 0.2095,
-   "brier_model": 0.2179
+   "n": 1056,
+   "brier_kalshi": 0.2103,
+   "brier_model": 0.218
   },
   "5-10": {
-   "n": 1134,
-   "brier_kalshi": 0.1661,
-   "brier_model": 0.1716
+   "n": 1128,
+   "brier_kalshi": 0.1655,
+   "brier_model": 0.1705
   },
   "2-5": {
    "n": 632,
@@ -376,10 +376,10 @@
    "brier_model": 0.1041
   },
   "0-2": {
-   "n": 334,
-   "brier_kalshi": 0.0599,
-   "brier_model": 0.0811
+   "n": 337,
+   "brier_kalshi": 0.0594,
+   "brier_model": 0.0806
   }
  },
- "generated_utc": "2026-11-22T16:12:38+00:00"
+ "generated_utc": "2026-11-22T16:40:59+00:00"
 }
