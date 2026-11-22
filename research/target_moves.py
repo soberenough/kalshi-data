@@ -17,13 +17,19 @@ Writes research/target_moves.json and research/target_moves.md.
 import gzip, json, math, subprocess, time
 from datetime import datetime, timezone, timedelta
 
+import functools
 import requests
+
+print = functools.partial(print, flush=True)
 
 K = "https://api.elections.kalshi.com/trade-api/v2"
 CB = "https://api.exchange.coinbase.com"
 UA = {"User-Agent": "kalshi-data-research/1.0"}
 SERIES = {"KXBTC15M": "BTC-USD", "KXETH15M": "ETH-USD", "KXSOL15M": "SOL-USD"}
-DAYS = 7
+DAYS = 3
+
+
+BS = {"BTC-USD": "btcusd", "ETH-USD": "ethusd", "SOL-USD": "solusd"}   # Bitstamp backup feed
 
 
 def get(url, params=None, tries=5):
@@ -66,22 +72,32 @@ for s in SERIES:
                                 "exp_value": m.get("expiration_value")})
         cursor = j.get("cursor")
         if not cursor: break
-print(len(markets), "settled markets")
+print(len(markets), "settled markets", {x: sum(m["series"] == x for m in markets) for x in SERIES})
 
-# ---- 2. Coinbase 1-minute candles ----------------------------------------------------------------
-px = {}
+# ---- 2. 1-minute prices: Coinbase, falling back to Bitstamp ---------------------------------------
+px, source = {}, {}
 for s, prod in SERIES.items():
     d = {}
     t0 = int(start) - 2 * 3600
+    probe = get(f"{CB}/products/{prod}/candles", {"granularity": 60}, tries=2)
+    use_cb = bool(probe)
+    print(prod, "Coinbase reachable" if use_cb else "Coinbase not reachable, using Bitstamp")
     while t0 < now:
-        t1 = min(t0 + 300 * 60, int(now))
-        j = get(f"{CB}/products/{prod}/candles", {"granularity": 60,
-                "start": datetime.fromtimestamp(t0, timezone.utc).isoformat(), "end": datetime.fromtimestamp(t1, timezone.utc).isoformat()})
-        for c in j or []:
-            d[int(c[0])] = float(c[4])   # minute start -> close price
+        if use_cb:
+            t1 = min(t0 + 300 * 60, int(now))
+            j = get(f"{CB}/products/{prod}/candles", {"granularity": 60,
+                    "start": datetime.fromtimestamp(t0, timezone.utc).isoformat(),
+                    "end": datetime.fromtimestamp(t1, timezone.utc).isoformat()}, tries=2)
+            for c in j or []:
+                d[int(c[0])] = float(c[4])
+        else:
+            t1 = min(t0 + 1000 * 60, int(now))
+            j = get(f"https://www.bitstamp.net/api/v2/ohlc/{BS[prod]}/", {"step": 60, "limit": 1000, "start": t0}, tries=2) or {}
+            for c in (j.get("data") or {}).get("ohlc", []):
+                d[int(c["timestamp"])] = float(c["close"])
         t0 = t1; time.sleep(0.15)
-    px[s] = d
-    print(prod, len(d), "minutes")
+    px[s] = d; source[s] = "coinbase" if use_cb else "bitstamp"
+    print(prod, len(d), "minutes from", source[s])
 
 
 def spot(s, t):
@@ -109,7 +125,7 @@ def model_p(s, t, target, close):
 
 
 # ---- 3. target rule, settlement proxy, calibration -------------------------------------------------
-out = {"window_days": DAYS, "markets": len(markets), "by_series": {}}
+out = {"window_days": DAYS, "markets": len(markets), "price_source": source, "by_series": {}}
 for s in SERIES:
     M = [m for m in markets if m["series"] == s]
     gaps, agree, rows = [], [], []
