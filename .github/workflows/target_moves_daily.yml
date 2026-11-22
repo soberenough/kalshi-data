@@ -1,0 +1,25 @@
+# Daily rerun of research/target_moves.py (15-minute crypto markets vs their target).
+# PUBLIC DATA ONLY: Kalshi market data + Coinbase/Bitstamp 1-minute prices. No account, no keys, no orders.
+name: target-moves daily
+on:
+  schedule:
+    - cron: "23 13 * * *"     # 13:23 UTC daily
+  workflow_dispatch:
+permissions: { contents: write }
+concurrency: { group: target-moves, cancel-in-progress: false }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests==2.32.3
+      - run: python research/target_moves.py
+      - run: |
+          d=$(date -u +%Y-%m-%d); mkdir -p research/target_moves_history
+          cp research/target_moves.json research/target_moves_history/$d.json
+          git config user.name "kalshi-data-bot"; git config user.email "kalshi-data-bot@users.noreply.github.com"
+          git add research; git diff --cached --quiet || git commit -q -m "research: target_moves daily $d"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 3; done

@@ -26,7 +26,7 @@ K = "https://api.elections.kalshi.com/trade-api/v2"
 CB = "https://api.exchange.coinbase.com"
 UA = {"User-Agent": "kalshi-data-research/1.0"}
 SERIES = {"KXBTC15M": "BTC-USD", "KXETH15M": "ETH-USD", "KXSOL15M": "SOL-USD"}
-DAYS = 3
+DAYS = 7
 
 
 BS = {"BTC-USD": "btcusd", "ETH-USD": "ethusd", "SOL-USD": "solusd"}   # Bitstamp backup feed
@@ -74,30 +74,47 @@ for s in SERIES:
         if not cursor: break
 print(len(markets), "settled markets", {x: sum(m["series"] == x for m in markets) for x in SERIES})
 
-# ---- 2. 1-minute prices: Coinbase, falling back to Bitstamp ---------------------------------------
-px, source = {}, {}
-for s, prod in SERIES.items():
-    d = {}
-    t0 = int(start) - 2 * 3600
-    use_cb = False   # Bitstamp: 1000 one-minute bars per call, fast; Coinbase's ranged candle calls stalled from Actions
-    calls = 0
+# ---- 2. 1-minute OHLC from two BRTI constituent exchanges; composite = mean across exchanges ----------
+def cb_minutes(prod):
+    d, t0 = {}, int(start) - 2 * 3600
     while t0 < int(now) - 60:
-        if use_cb:
-            t1 = min(t0 + 300 * 60, int(now))
-            j = get(f"{CB}/products/{prod}/candles", {"granularity": 60,
-                    "start": datetime.fromtimestamp(t0, timezone.utc).isoformat(),
-                    "end": datetime.fromtimestamp(t1, timezone.utc).isoformat()}, tries=2)
-            for c in j or []:
-                d[int(c[0])] = float(c[4])
-        else:
-            t1 = min(t0 + 1000 * 60, int(now))
-            j = get(f"https://www.bitstamp.net/api/v2/ohlc/{BS[prod]}/", {"step": 60, "limit": 1000, "start": t0}, tries=2) or {}
-            for c in (j.get("data") or {}).get("ohlc", []):
-                d[int(c["timestamp"])] = float(c["close"])
-        t0 = t1; time.sleep(0.15); calls += 1
-        if calls % 3 == 0: print(f"  {prod}: {calls} calls, {len(d)} minutes", flush=True)
-    px[s] = d; source[s] = "coinbase" if use_cb else "bitstamp"
-    print(prod, len(d), "minutes from", source[s])
+        t1 = min(t0 + 300 * 60, int(now))
+        j = get(f"{CB}/products/{prod}/candles", {"granularity": 60, "start": t0, "end": t1}, tries=3) or []
+        for c in j if isinstance(j, list) else []:
+            d[int(c[0])] = (float(c[3]), float(c[2]), float(c[1]), float(c[4]))   # open, high, low, close
+        t0 = t1; time.sleep(0.12)
+    return d
+
+
+def bs_minutes(prod):
+    d, t0 = {}, int(start) - 2 * 3600
+    while t0 < int(now) - 60:
+        t1 = min(t0 + 1000 * 60, int(now))
+        j = get(f"https://www.bitstamp.net/api/v2/ohlc/{BS[prod]}/", {"step": 60, "limit": 1000, "start": t0}, tries=3) or {}
+        for c in (j.get("data") or {}).get("ohlc", []):
+            d[int(c["timestamp"])] = (float(c["open"]), float(c["high"]), float(c["low"]), float(c["close"]))
+        t0 = t1; time.sleep(0.12)
+    return d
+
+
+ohlc, source = {}, {}
+for s, prod in SERIES.items():
+    feeds = {"coinbase": cb_minutes(prod), "bitstamp": bs_minutes(prod)}
+    feeds = {k: v for k, v in feeds.items() if len(v) > 100}
+    comp = {}
+    for m in set().union(*[set(v) for v in feeds.values()]):
+        rows = [v[m] for v in feeds.values() if m in v]
+        comp[m] = tuple(sum(r[i] for r in rows) / len(rows) for i in range(4))
+    ohlc[s] = comp; source[s] = "+".join(feeds)
+    print(prod, {k: len(v) for k, v in feeds.items()}, "composite minutes:", len(comp))
+px = {s: {m: v[3] for m, v in d.items()} for s, d in ohlc.items()}
+
+
+def avg60(s, t_end):
+    """Kalshi-style 60-second average ending at t_end, approximated by the composite 1-minute bar
+    that covers [t_end-60, t_end): (open+high+low+close)/4."""
+    b = ohlc[s].get(int(t_end // 60 * 60) - 60)
+    return sum(b) / 4 if b else None
 
 
 def spot(s, t):
@@ -128,11 +145,12 @@ def model_p(s, t, target, close):
 out = {"window_days": DAYS, "markets": len(markets), "price_source": source, "by_series": {}}
 for s in SERIES:
     M = [m for m in markets if m["series"] == s]
-    gaps, agree, rows = [], [], []
+    gaps, agree, agree_own, rows = [], [], [], []
     for m in M:
-        o = spot(s, m["open"] + 60); c = spot(s, m["close"] + 60)
-        if o: gaps.append((m["target"] - o) / o * 1e4)            # bp: target vs Coinbase at open
+        o = avg60(s, m["open"]); c = avg60(s, m["close"])
+        if o: gaps.append((m["target"] - o) / o * 1e4)            # bp: Kalshi target vs our 60 s average before open
         if c: agree.append((c >= m["target"]) == (m["result"] == "yes"))
+        if c and o: agree_own.append((c >= o) == (m["result"] == "yes"))
         for mins_left in (14, 10, 7, 5, 3, 2, 1):
             t = m["close"] - mins_left * 60
             p = model_p(s, t, m["target"], m["close"])
@@ -154,7 +172,9 @@ for s in SERIES:
         "target_minus_open_bp": {"median": round(gaps[len(gaps) // 2], 2) if gaps else None,
                                  "p10": round(gaps[len(gaps) // 10], 2) if gaps else None,
                                  "p90": round(gaps[9 * len(gaps) // 10], 2) if gaps else None},
-        "coinbase_agrees_with_settlement_%": round(100 * sum(agree) / max(len(agree), 1), 1),
+        "composite_agrees_with_settlement_%": round(100 * sum(agree) / max(len(agree), 1), 1),
+        "composite_alone_agrees_%": round(100 * sum(agree_own) / max(len(agree_own), 1), 1),
+        "abs_target_error_bp_median": round(sorted(abs(g) for g in gaps)[len(gaps) // 2], 2) if gaps else None,
         "model_calibration": cal, "by_minutes_left": by_left}
 
 # ---- 4/5. recorded Kalshi snapshots: model vs market, disagreements, cheap contracts -----------------
@@ -210,10 +230,10 @@ if snaps:
 out["generated_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
 json.dump(out, open("research/target_moves.json", "w"), indent=1)
 lines = [f"# 15-minute crypto markets vs their target ({DAYS} days to {out['generated_utc']})", "",
-         "Public data only. Bitstamp 1-minute closes are a proxy for Kalshi's settlement index.", ""]
+         "Public data only. A Coinbase+Bitstamp composite (60-second averages, as Kalshi settles) is a proxy for Kalshi's settlement index.", ""]
 for s, v in out["by_series"].items():
-    lines.append(f"- **{s}**: {v['markets']} markets, YES won {v['yes_%']}%; target vs Coinbase at open median "
-                 f"{v['target_minus_open_bp']['median']} bp; Coinbase agrees with settlement {v['coinbase_agrees_with_settlement_%']}%")
+    lines.append(f"- **{s}**: {v['markets']} markets, YES won {v['yes_%']}%; our target is off by a median {v['abs_target_error_bp_median']} bp; composite agrees with settlement "
+                 f"{v['composite_agrees_with_settlement_%']}% (using Kalshi's target) / {v['composite_alone_agrees_%']}% (using our own target)")
 if "snapshots" in out:
     lines += ["", f"- Snapshots: {out['snapshots']}", f"- Model vs Kalshi disagree >= 10c: {out['disagree_10c']}",
               f"- Cheap contracts: {out['cheap_contracts']}"]
