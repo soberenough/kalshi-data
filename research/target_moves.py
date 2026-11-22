@@ -210,7 +210,7 @@ if snaps:
 out["generated_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
 json.dump(out, open("research/target_moves.json", "w"), indent=1)
 lines = [f"# 15-minute crypto markets vs their target ({DAYS} days to {out['generated_utc']})", "",
-         "Public data only. Coinbase 1-minute closes are a proxy for Kalshi's settlement index.", ""]
+         "Public data only. Bitstamp 1-minute closes are a proxy for Kalshi's settlement index.", ""]
 for s, v in out["by_series"].items():
     lines.append(f"- **{s}**: {v['markets']} markets, YES won {v['yes_%']}%; target vs Coinbase at open median "
                  f"{v['target_minus_open_bp']['median']} bp; Coinbase agrees with settlement {v['coinbase_agrees_with_settlement_%']}%")

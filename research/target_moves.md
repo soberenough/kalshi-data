@@ -1,6 +1,6 @@
 # 15-minute crypto markets vs their target (3 days to 2026-11-22T15:42:42+00:00)
 
-Public data only. Coinbase 1-minute closes are a proxy for Kalshi's settlement index.
+Public data only. Bitstamp 1-minute closes are a proxy for Kalshi's settlement index.
 
 - **KXBTC15M**: 288 markets, YES won 43.8%; target vs Coinbase at open median 1.69 bp; Coinbase agrees with settlement 87.5%
 - **KXETH15M**: 288 markets, YES won 49.7%; target vs Coinbase at open median 3.86 bp; Coinbase agrees with settlement 89.9%
