@@ -192,9 +192,16 @@ for f in files:
         m = byt[r["ticker"]]
         p = model_p(m["series"], r["t"], m["target"], m["close"])
         if p is None or not (0 < bid < ask < 1): continue
-        snaps.append({"s": m["series"], "mins": (m["close"] - r["t"]) / 60, "bid": bid, "ask": ask,
-                      "mid": (bid + ask) / 2, "model": p, "yes": m["result"] == "yes"})
+        S0 = spot(m["series"], r["t"]); S3 = spot(m["series"], r["t"] - 180); sg = sigma(m["series"], r["t"])
+        snaps.append({"s": m["series"], "ticker": r["ticker"], "t": r["t"], "mins": (m["close"] - r["t"]) / 60,
+                      "bid": bid, "ask": ask, "mid": (bid + ask) / 2, "model": p, "yes": m["result"] == "yes",
+                      "dist_bp": round((S0 / m["target"] - 1) * 1e4, 2) if S0 else None,
+                      "mom3_bp": round((S0 / S3 - 1) * 1e4, 2) if S0 and S3 else None,
+                      "sigma_bp": round(sg * 1e4, 3) if sg else None,
+                      "yes_depth": sum(q for _, q in (r.get("yes_book") or [])[:3]),
+                      "no_depth": sum(q for _, q in (r.get("no_book") or [])[:3])})
 print(len(snaps), "matched snapshots")
+json.dump(snaps, open("research/target_moves_snaps.json", "w"))
 if snaps:
     n = len(snaps)
     out["snapshots"] = {"n": n,
