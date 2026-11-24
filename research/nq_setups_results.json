@@ -1,0 +1,51 @@
+{
+ "data": "NQ=F 5-minute bars, RTH, 2026-09-16 to 2026-11-24, 50 days",
+ "costs": "1 MNQ ($2/pt), $1.50 round-trip fees, 1 tick slippage on market entries and stops",
+ "results": {
+  "fvg": {
+   "trades": 394,
+   "win_pct": 27.7,
+   "total_usd": -1679.0,
+   "per_trade_usd": -4.26,
+   "max_drawdown_usd": 3793.0,
+   "profit_factor": 0.84,
+   "first_half_usd": 1573.0,
+   "second_half_usd": -3252.0,
+   "exits": {
+    "target": 106,
+    "stop": 281,
+    "eod": 7
+   }
+  },
+  "ifvg": {
+   "trades": 182,
+   "win_pct": 16.5,
+   "total_usd": -2905.5,
+   "per_trade_usd": -15.96,
+   "max_drawdown_usd": 2994.0,
+   "profit_factor": 0.44,
+   "first_half_usd": -76.0,
+   "second_half_usd": -2829.5,
+   "exits": {
+    "target": 30,
+    "stop": 152,
+    "eod": 0
+   }
+  },
+  "orb_retest": {
+   "trades": 33,
+   "win_pct": 30.3,
+   "total_usd": 400.0,
+   "per_trade_usd": 12.12,
+   "max_drawdown_usd": 437.5,
+   "profit_factor": 1.22,
+   "first_half_usd": -221.0,
+   "second_half_usd": 621.0,
+   "exits": {
+    "target": 9,
+    "stop": 23,
+    "eod": 1
+   }
+  }
+ }
+}
