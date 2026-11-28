@@ -26,6 +26,7 @@ API = "https://api.elections.kalshi.com/trade-api/v2"
 UA = {"User-Agent": "starship-bridge-recorder/1.0"}
 SIZE = 100
 TOP = 250
+PINNED = Path(__file__).with_name("pinned.txt")  # tickers always recorded, one per line
 
 
 def get(url, params=None, tries=4):
@@ -92,7 +93,15 @@ def main():
     ap.add_argument("--out", default=".")
     a = ap.parse_args()
     now = datetime.now(timezone.utc)
-    progs = sorted(programs(), key=per_day, reverse=True)[:TOP]
+    allp = programs()
+    pins = set()
+    if PINNED.exists():
+        pins = {l.split("#")[0].strip() for l in PINNED.read_text().splitlines()} - {""}
+    # stable tie-break by ticker so the cut does not reshuffle at each rollover (hundreds tie at $100/day)
+    ranked = sorted(allp, key=lambda p: (-per_day(p), p["market_ticker"]))
+    progs = ranked[:TOP]
+    seen = {p["market_ticker"] for p in progs}
+    progs += [p for p in ranked[TOP:] if p["market_ticker"] in pins and p["market_ticker"] not in seen]
     recs = []
     for p in progs:
         ob = (get(f"{API}/markets/{p['market_ticker']}/orderbook") or {}).get("orderbook_fp") or {}
